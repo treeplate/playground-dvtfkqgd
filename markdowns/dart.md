@@ -16,12 +16,12 @@ void main() {
         b = b + m.codeUnitAt(i).toRadixString(2).padLeft(7, "0");
     }
     String a = "";
-    a += c[b[0].codeUnits.first - "0".codeUnits.first] + " 0";
+    a += c[(b[0].codeUnits.first - "0".codeUnits.first)]! + " 0";
     for (int i = 1; i < b.length; i++)
         if (b[i] == b[i - 1])
             a += "0";
         else
-            a += " " + c[b.codeUnitAt(i) - "0".codeUnits.first] + " 0";
+            a += " " + c[b.codeUnitAt(i) - "0".codeUnits.first]! + " 0";
     print(a);
 }
 ```
